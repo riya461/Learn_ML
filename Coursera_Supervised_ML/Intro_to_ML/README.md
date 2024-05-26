@@ -19,7 +19,7 @@ X ( input ) -> Y ( output ) mapping
 ```
 - learns from "right answers"
 
-| Inout | Output | Application |
+| Input | Output | Application |
 |----------|----------|----------|
 | email   | spam (0/1)  | spam filtering   |
 | audio    | text transcript   | speech recognition   |
@@ -84,3 +84,52 @@ Example:
 - principle component analysis (PCA) and singular value decomposition (SVD) algorithms 
 
 - compress data 
+
+# Regression Model 
+
+- House Price Prediction 
+- getting a value as output 
+- supervised learning model : data "right answers"
+
+![alt text](image.png)
+
+```mermaid
+flowchart TD
+    Training_Set --> Learning_algorithm;
+
+    subgraph subgraph2
+        direction LR
+        x_feature-->f_model
+        f_model --> y_prediction
+    end
+    
+    Learning_algorithm --> subgraph2;
+    
+```
+
+
+### Cost Function
+https://medium.com/@yennhi95zz/3-understanding-the-cost-function-in-linear-regression-for-machine-learning-beginners-ec9edeecbdde
+
+
+| General Notation | Description |
+|----------|----------|
+| a   | scalar  |
+| **a**    | vector   | 
+| x   | Training feature values   |
+| $ x^{i} , y^{i} $ | i th training Example | 
+| m  | number of training  | 
+| w  | weight | 
+| b  | bias | 
+| $ f_{w,b} (x^i )$  | Model evaluation | 
+
+![alt text](image-1.png)
+
+$$ J(w,b) = 1/2m * \sum_{i=1}^m ( f_{w,b}(x^i) - y^i)^2 $$
+
+
+![alt text](image-2.png)
+
+
+
+
