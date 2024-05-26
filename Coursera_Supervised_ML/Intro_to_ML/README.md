@@ -27,7 +27,7 @@ X ( input ) -> Y ( output ) mapping
 | id, user_info | click(0/1) | recommendation ad|
 
 
-### Regression 
+### 1. Regression 
 - predict a number or quantity as output 
 - infinitely many possible output 
 
@@ -36,7 +36,7 @@ X ( input ) -> Y ( output ) mapping
 ![My Diagram](my-draw1.drawio.png)
 
 
-### Classification 
+### 2. Classification 
 - predict categories 
 - small number of possible output 
 
@@ -51,7 +51,7 @@ X ( input ) -> Y ( output ) mapping
 - learns without human supervision
 - patterns, structure 
 
-### Clustering 
+### 1. Clustering 
 For raw unlabelled data and breaking it into groups based on differences and similarity 
 
 Types:
@@ -68,7 +68,7 @@ Example:
 - DNA microarray
 - Grouping customers 
 
-### Association 
+### 2. Association 
 - correlations and co-occurrences within the data 
 - connections between data objects 
 - Eclat , FP - growth algorithms 
@@ -78,7 +78,7 @@ Example:
 - specific diagnosis from past patient cases  
 
 
-### Dimension reduction 
+### 3. Dimension reduction 
 - extracts important features from the dataset
 - reducing the number of irrelevant or random features present. ( data inputs )
 - principle component analysis (PCA) and singular value decomposition (SVD) algorithms 
