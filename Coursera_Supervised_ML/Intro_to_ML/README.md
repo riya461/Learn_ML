@@ -133,3 +133,89 @@ $$ J(w,b) = 1/2m * \sum_{i=1}^m ( f_{w,b}(x^i) - y^i)^2 $$
 
 
 
+# Gradient Descent 
+
+- training linear regression 
+- we want $$ min_{w,b} J(w,b) $$
+- For linear regression or any function 
+
+1. Start with some w,b, common choice to set both to 0 
+2. Keep changing w,b to reduce J(w,b)
+3. Until we settle at or near a minimum 
+
+![alt text](image-3.png)
+
+
+[Notes on gradient descent](https://towardsdatascience.com/gradient-descent-algorithm-a-deep-dive-cf04e8115f21#:~:text=Gradient%20descent%20(GD)%20is%20an,e.g.%20in%20a%20linear%20regression)
+
+- iterative first-order optimisation algorithm 
+- find local minimum or maximum of a given function 
+- to minimise a cost or loss function 
+
+
+### Function requirements 
+- differentible 
+- convex 
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+### Algorithm 
+
+1. choose a starting point (initialisation)
+2. calculate gradient at this point
+3. make a scaled step in the opposite direction to the gradient (objective: minimise)
+4. repeat points 2 and 3 until one of the criteria is met:
+
+    a. maximum number of iterations reached
+
+    b. step size is smaller than the tolerance (due to scaling or a small gradient) 
+
+This function takes 5 parameters:
+
+1. starting point [float] - in our case, we define it manually but in practice, it is often a random initialisation
+
+2. gradient function [object] - specified before-hand and passed to the GD function
+
+3. learning rate [float] - scaling factor for step sizes
+
+4. maximum number of iterations [int]
+
+5. tolerance [float] - to conditionally stop the algorithm 
+
+
+### Equations 
+
+$$ temp_ w = w - \alpha \frac{\mathrm{d} }{\mathrm{d}w} J(w,b)
+ $$
+
+
+$$ temp_ b =  b - \alpha \frac{\mathrm{d} }{\mathrm{d}w} J(w,b) $$
+
+$$ w = tmp_w $$
+
+$$ b = tmp_b $$
+
+## Learning Rate and Gradient descent Intuiton
+
+$$ \alpha $$
+
+![alt text](image-6.png)
+
+
+- If learning rate is too small then , the number of steps to get to the minimum will increase, making the gradient descent slow. 
+
+
+- If learning rate is too large then , the steps will be large while updation making the cost worse at some cases, overshoot never reach minimum, failing to coverge, may diverge.
+
+### Can reach local minimum with fixed learning rate 
+
+![alt text](image-7.png)
+
+
+![alt text](image-8.png)
+
+![alt text](image-9.png)
+
+
